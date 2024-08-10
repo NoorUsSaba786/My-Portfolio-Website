@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor-Us-Saba - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 110px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.1rem;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 10px;
+            background: #1e2167;
+            color: white;
+            border: 1.5px solid white;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 135px;
+        }
+
+        .image-top {
+            width: 80px;
+            position: relative;
+            top: -70px;
+            left: -50px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 10px;
+            left: -40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 20px;
+            left: -40px;
+            color: grey;
+            width: 150px;
+            font-size: 12px;
+
+        }
+
+        #about {
+            padding: 80px 0;
+            top: 100px;
+            margin: 100px;
+            color: grey;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+
+        .about-col-1 {
+            flex-basis: 60%;
+        }
+
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+
+        }
+
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: rgb(170, 107, 228);
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transform: 0.5s;
+        }
+
+        .tab-links.active-link::after {
+            width: 50%;
+        }
+
+        .tab-contents ul li {
+            list-style: none;
+            margin: 10px 0px;
+        }
+
+        .tab-contents ul li span {
+            color: rgb(170, 107, 228);
+            font-size: 14px;
+        }
+
+        .tab-contents {
+            display: none;
+        }
+
+        .tab-contents.acive-tab {
+            display: block;
+        }
+
+        #services {
+            margin: 100px;
+        }
+        .service-image {
+            width: 60px;
+            position: relative;
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 10px;
+
+        }
+
+        .services-list div {
+            background: grey;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            border-radius: 10px;
+            transition: background 0.5s, transform 0.5s;
+        }
+
+        .services-list div i {
+            font-size: 50px;
+            margin: bottom 30px;
+        }
+
+        .services-list div h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .services-list div a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            margin: top 20px;
+            display: inline-block;
+        }
+
+        .services-list div:hover {
+            background-color: rgb(170, 107, 228);
+            transform: translateY(-10px);
+
+        }
+
+        footer {
+            background-color: #0e0e1a;
+        }
+
+        .footer {
+            display: flex;
+            margin: 50px;
+            padding: 20px;
+            justify-content: space-evenly;
+        }
+
+
+        .footer>div {
+            width: 200px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 0px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, Myself <span class="purple">Noor Us Saba</span>.
+
+                <div>and I am a Passionate </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="NOOR US SABA (CV).pdf">Download Resume</a></button>
+                    <button class="btn"><a href="https://www.linkedin.com/in/noor-us-saba000/"> Visit Linkedin Profile
+                        </a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="abc.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <div id="experience"> 
+            <h1>Work History</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="First.png" alt="">
+                    <div class="vertical-title">
+                        WordPress Developer (March 2024 - June 2024)
+                    </div>
+                    <div class="vertical-desc">
+                        In WordPress Elementor page builder using Template and by customization developing multiple
+                        international websites, develop E-Commerce website using WooCommerce plugin, talk to client
+                        about the structure of website, making a domain on the clients hosting, making the website live
+                        and manage the backend issues of WordPress. Supervises 2 interns and 1 Junior WordPress
+                        Developer.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="First.png" alt="">
+                    <div class="vertical-title">
+                        WordPress Designer (January 2024 - Febuary 2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Worked as a Part time Employee. Its Online Job. I have managed their WordPress website including
+                        resizing image, content uploading and managed backup and security issues.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="First.png" alt="">
+                    <div class="vertical-title">
+                        WordPress Developer (August 2023 - December 2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Using WordPress Elementor and Elementor Pro page builders
+                        develop a website of GFS Builders and Developer National and International.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="First.png" alt="">
+                    <div class="vertical-title">
+                        WordPress Designer Intern (August 2022 - October 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Coordinated with the supervisor to arrange the events. In WordPress Gutenberg interface upload
+                        multiple posting, pages and to install plugins and themes.
+                    </div>
+                </div>
+                
+                
+                
+                </div>
+            </div>
+        </section>
+
+
+        <div id="about">
+
+            <div class="container">
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hi, myself Noor Us Saba I am Innovative and detail-oriented Computer Engineer actively seeking a
+                        challenging role to apply my
+                        proficiency. Well-versed in software development and hardware design, with a proven ability to
+                        troubleshoot and optimize system performance. Eager to contribute my technical expertise and
+                        enthusiasm for innovation to a dynamic engineering team.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents acive-tab" id="Education">
+                        <ul>
+                            <li><span>2024-ongoing</span><br>Student at Governor Initiative For Artificial Intelligience
+                            </li>
+                            <li><span>2019-2023</span><br>Bachelor of Computer Engineering from Bahria University</li>
+                            <li><span>2016-2018</span><br>Intermediate from Intermediate Board Of Karachi</li>
+                            <li><span>2014-2016</span><br>Matric Board of Secondary Education Karachi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <img class="service-image" src="First.png" alt="">
+                        <h2>WordPress Developer</h2>
+                        <p>As a WordPress developer skilled in Elementor, you excel at turning design visions into
+                            stunning, interactive websites using its intuitive drag-and-drop interface. Your expertise
+                            enables you to create custom layouts and dynamic content effortlessly, leveraging
+                            Elementor’s extensive widget library and styling options. By integrating these designs
+                            seamlessly with WordPress, you deliver high-quality, responsive solutions that meet client
+                            needs while ensuring top performance and aesthetic appeal.
+                        </p>
+
+                    </div>
+                    <div>
+                        <img class="service-image" src="Third.png" alt="">
+                        <h2>E-Commerce Web Developer</h2>
+                        <p>As an eCommerce developer, you create high-performing online stores that drive sales and
+                            offer exceptional user experiences. You design and implement robust solutions, integrate
+                            payment gateways, and optimize product displays to ensure seamless navigation. Leveraging
+                            advanced technologies, you deliver secure, scalable, and visually appealing shopping
+                            environments, enhancing site performance and managing inventory to maximize conversions and
+                            customer satisfaction.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="service-image" src="Second.png" alt="">
+                        <h2>Mobile App Developer</h2>
+                        <p>As a mobile app developer specializing in Flutter, you craft high-performance, cross-platform
+                            apps for both iOS and Android with a single codebase. Your expertise in Flutter enables you
+                            to build visually rich, responsive interfaces efficiently, leveraging its widgets and
+                            packages to create scalable, customized applications. You ensure optimal performance, smooth
+                            user experiences, and seamless backend integration, driving innovation and staying ahead in
+                            the mobile app landscape.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="contact">
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Contact Me </h3>
+            </div>
+            <div class="footer-second"><p>noorussaba2019@gmail.com</p></div>
+            <div class="footer-third"><p>+923092396187</p></div>
+        </div>
+            <div class="footer-rights">
+                Copyright &#169 2024. Noor Us Saba | All Right Reserved
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Computer Engineer', 'Web Developer', 'Public Speaker', 'and', 'Mobile App Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
